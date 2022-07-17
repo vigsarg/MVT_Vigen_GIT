@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from App_Familia.views import familia, vista_familia
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('familia/<nombre>/<apellido>/<dni>/<fecha_de_nacimiento>/', familia),
+    path('vista-familia/', vista_familia),
+
 ]
